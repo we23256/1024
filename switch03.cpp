@@ -1,0 +1,33 @@
+#inculde<stdio.h>
+
+int main()
+{
+	int year , month , days;
+	
+	printf("년도 입력: " );
+	scanf("%d",&year);
+    printf("월  입력: " );
+	scanf("%d", &month );
+	
+	switch(month){
+		case 2:
+			if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+			   days = 29;
+			else
+			   days = 28; 
+			break    
+		case 4:	
+		case 6:
+		case 9:
+		case 11:
+		    days = 30; 
+			break;   
+		default;
+			 	 
+	}
+	
+	printf("%d년 %d월은 %d일 있습니다.",year,month, days);
+	
+	return 0;
+	
+}
